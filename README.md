@@ -7,4 +7,5 @@ Usage: tinos_eisai_sy.py <filename>
 
 Example:
 tinos_eisai_esy.py myfile
-myfile,1073741824,0.42(%),/dev/sde
+
+  myfile,1073741824,0.42(%),/dev/sde
