@@ -5,7 +5,7 @@ tinos_eisai_sy: This is a greek phrase which can be free-from translated as "who
 
 Usage:
 
-tinos_eisai_sy.py <filename>
+tinos_eisai_sy.py   <filename>
 
 Example:
 
