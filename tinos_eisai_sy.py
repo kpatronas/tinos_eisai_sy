@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-import os
+import os,time
 import sys
+import stat
 from subprocess import PIPE, Popen
+
 
 def cmd(cmd):
     """
@@ -26,4 +28,13 @@ if __name__ == '__main__':
     avail=int(avail)
     total=used+avail
     total_perc=round((sz/total)*100,3)
-    print('%s,%s,%s(%%),%s'%(filename,sz,total_perc,part))
+    created=os.path.getctime(filename)
+    st=os.stat(filename)
+    mode=st.st_mode
+    print("📅 Created: ", time.ctime(created))
+    print("📄 Filename: ", filename)
+    print("🚀 Space on disk: ", total_perc)
+    print("📜 Permissions: ", stat.filemode(mode))
+    print("💾 Partition: ",part)
+
+
